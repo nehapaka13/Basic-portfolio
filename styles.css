@@ -1,0 +1,79 @@
+body.background-image {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header, main, footer {
+    background: rgba(255, 255, 255, 0.8); /* Adding a slight white background for readability */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Additional styling for text color, alignment, etc. can be added as needed */
+h1, h2 {
+    color: #f20655; /* Dark text for contrast */
+}
+
+p {
+    color: black;
+}
+
+/* Navigation bar styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Bootstrap primary color */
+}
+
+/* Styling for section headers with cricket ball bullets */
+section h2 {
+    position: relative;
+    padding-left: 30px; /* Adjust to create space for the custom bullet */
+}
+
+section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px; /* Size of the ball */
+    height: 12px; /* Size of the ball */
+    background-color: #6a0101; /* Color of the ball */
+    border-radius: 50%; /* Makes the element a circle */
+    border: 2px solid #fff; /* White border to resemble stitching */
+    box-shadow: inset 0 0 0 1px #fff; /* Inner shadow to enhance stitching look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section h2::before::after {
+    content: '';
+    width: 2px; /* Width of the stitching line */
+    height: 6px; /* Length of the stitching line */
+    background-color: #fff; /* Color of the stitching line */
+    position: absolute;
+    transform: rotate(45deg); /* Rotate to resemble stitching */
+}
+
+section h2::before::before {
+    content: '';
+    width: 2px; /* Width of the stitching line */
+    height: 6px; /* Length of the stitching line */
+    background-color: #fff; /* Color of the stitching line */
+    position: absolute;
+    transform: rotate(-45deg); /* Rotate to resemble stitching */
+}
